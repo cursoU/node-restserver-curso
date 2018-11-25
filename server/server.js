@@ -5,9 +5,12 @@ const express = require("express");
 
 const app = express();
 
-
+const path = require('path');
 
 const bodyParser = require('body-parser');
+
+//habilitar la carpeta public
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 // parse application/x-www-form-urlencoded
